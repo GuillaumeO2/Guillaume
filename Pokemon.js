@@ -6,7 +6,8 @@ function afficherDonnees(data) {
       background: #f9f9f9;
       border: 1px solid #ccc;
       padding: 20px;
-      width: 280px;
+      width: 100%;
+      max-width: 280px;
       margin: auto;
       text-align: center;
       transition: all 0.3s ease;
@@ -52,15 +53,16 @@ function afficherDonnees(data) {
       </ul>
     </div>
   `;
-}
 
   // Animation zoom + fade sur l'image
   const img = document.getElementById('poke-img');
   setTimeout(() => {
-    img.style.opacity = 1;
-    img.style.transform = 'scale';
+    if (img) {
+      img.style.opacity = 1;
+      img.style.transform = 'scale(1)';
+    }
   }, 50);
-
+}
 
 function nombreAleatoire(max) {
   return Math.floor(Math.random() * max) + 1;
