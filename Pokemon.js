@@ -86,7 +86,7 @@ async function afficherPokemonParId(id) {
   } catch {
     alert("Erreur lors du chargement du Pokémon");
   }
-}
+}j
 
 async function afficherPokemonAleatoire() {
   const total = await getTotalPokemons();
